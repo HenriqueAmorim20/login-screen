@@ -1,0 +1,219 @@
+@font-face {
+ font-family: "Trenda";
+ src: url('./assets/fonts/trenda/title.otf') format("opentype");
+}
+
+*, *::after, *::before {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+:root {
+ --text: #5e5b5e;
+ --primary: #fefefe;
+ --seconday: #7691bf;
+ --tertiary: #516fa3;
+ --background: #faf3fc;
+}
+
+body {
+ height: 100vh;
+ width: 100vw;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: var(--background);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card {
+ position: relative;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: var(--primary);
+ width: 70%;
+ height: 75%;
+ overflow: hidden;
+ border-radius: 15px;
+ box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.27);
+}
+
+.form-section {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ width: 50%;
+ height: 100%;
+}
+
+.call {
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 100%;
+ width: 50%;
+ background:transparent;
+ color: var(--primary);
+ text-align: center;
+ z-index: 2;
+ opacity: 1;
+ transition: 1s all ease;
+}
+
+#sign-in-call {
+  left: 0;
+  right: unset;
+}
+
+#sign-up-call {
+ left: unset;
+ right: 0;
+}
+
+.hide {
+ opacity: 0;
+ transform: translateY(200%);
+}
+
+
+#cover {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: var(--seconday);
+   background: linear-gradient(90deg, var(--seconday) 45%, var(--tertiary) 93%);
+  z-index: 1;
+  transition: 1s all ease;
+}
+
+.right {
+ transform: translateX(100%);
+}
+
+.left {
+ transform: translateX(0%);
+}
+
+.call .title {
+  color: var(--primary);
+}
+
+.title {
+ font-family: "Trenda";
+ font-size: 2.5rem;
+ letter-spacing: 1px;
+ color: #383838;
+}
+
+.social {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  margin: 1.2rem 0;
+}
+
+.social-container {
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 50%;
+ width: 2rem;
+ height: 2rem;
+ box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.143);
+ margin: 0 0.5rem;
+ font-size: 1.3rem;
+ padding: 1.3rem;
+ border: 0.0133rem solid rgba(0, 0, 0, 0.143);
+ color: var(--text);
+}
+
+.form {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ width: 70%;
+ color: var(--text);
+}
+
+.subtitle {
+ margin-bottom: 0.6rem;
+}
+
+.form-field {
+ width: 100%;
+ margin: 0 0 1.2rem;
+ border: none;
+ background: rgb(228, 228, 228);
+ padding: 1rem;
+}
+
+.form-field:focus {
+ outline-color: var(--secondary);
+}
+
+.actions {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+}
+
+.forgot-password {
+ cursor: pointer;
+ margin: 0.5rem 0 1.5rem;
+ font-size: 1.2rem;
+ opacity: 0.8;
+}
+
+.forgot-password:hover {
+ text-decoration: underline;
+}
+
+.form-btn {
+ cursor: pointer;
+ border: none;
+ border-radius: 2rem;
+ text-transform: uppercase;
+ color: var(--primary);
+ font-size: 0.9rem;
+ background-color: var(--tertiary);
+ padding: 0.9rem 3.5rem;
+ transition: 0.5s all ease;
+}
+
+.form-btn:hover {
+ box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.188);
+ transform: translateY(-2%);
+}
+
+.call .subtitle {
+ opacity: 0.7;
+ font-size: 1.2rem;
+ margin: 2rem 0;
+}
+
+.call-btn {
+ cursor: pointer;
+ border: 0.063rem solid var(--primary);
+ color: var(--primary);
+ border-radius: 2rem;
+ text-transform: uppercase;
+ font-size: 0.9rem;
+ background-color: transparent;
+ padding: 0.8rem 3.5rem;
+ transition: 0.5s all ease;
+}
+
+.call-btn:hover {
+ box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.188);
+ transform: translateY(-2%);
+}
